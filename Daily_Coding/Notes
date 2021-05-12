@@ -1,0 +1,7 @@
+For python users, I achieved an astonishing speed improvemets by using the bisect module, and keeping a tab of the numbers to insert and delete from the fixed length sliding window:
+
+The element to remove is always present in the window, so the bisect module can help to find its postion in sorted array (the elements of the window is needed to be sorted to find median).
+
+The bisect can then be used to insert the inserting number into the sorted window, keeping it sorted on insert.
+
+Achieved O(n) solution time, mainly due ot moving the list elemets at insert and remove; additional O(log n) due to bisect is minimal and can be ignored.
